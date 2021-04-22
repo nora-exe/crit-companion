@@ -1,7 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import global from './global';
+import useAPI from './hooks/use.api'
 
 function App() {
+  global.data = useAPI();
+
+  useEffect(() => {
+    global.data.getAll()
+    console.log(global.data.fish,global.data.bugs,global.data.crits)
+  },[]) 
+  
   return (
     <div className="App">
       <header className="App-header">
