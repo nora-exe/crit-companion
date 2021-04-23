@@ -9,6 +9,8 @@ function App() {
 
   useEffect(() => {
     global.data.getAll()
+    global.data.getFish(true)
+    global.data.getBugs()
     console.log(global.data.fish,global.data.bugs,global.data.crits)
   },[]) 
   
